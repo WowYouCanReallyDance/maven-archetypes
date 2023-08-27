@@ -17,23 +17,23 @@ import javafx.stage.Stage
 class AppLaunch : Application() {
     override fun start(stage: Stage) {
         stage.apply {
-            this.scene = Scene(GridPane().apply {
-                this.alignment = Pos.CENTER
-                this.setPrefSize(820.0, 560.0)
-                this.background = Background.fill(Paint.valueOf("#FAEBD7"))
-                this.children.add(VBox().apply {
-                    this.alignment = Pos.CENTER
-                    this.background = Background.fill(Paint.valueOf("#A69532"))
-                    this.children.addAll(
+            scene = Scene(GridPane().apply {
+                alignment = Pos.CENTER
+                setPrefSize(820.0, 560.0)
+                background = Background.fill(Paint.valueOf("#FAEBD7"))
+                children.add(VBox().apply {
+                    alignment = Pos.CENTER
+                    background = Background.fill(Paint.valueOf("#A69532"))
+                    children.addAll(
                         TextField().apply {
-                            this.setPrefSize(320.0, 32.0)
+                            setPrefSize(320.0, 32.0)
                         },
                         PasswordField().apply {
-                            this.setPrefSize(320.0, 32.0)
+                            setPrefSize(320.0, 32.0)
                         },
                         Button().apply {
-                            this.setPrefSize(320.0, 46.0)
-                            this.onMouseClicked = EventHandler {
+                            setPrefSize(320.0, 46.0)
+                            onMouseClicked = EventHandler {
                                 Alert(Alert.AlertType.CONFIRMATION).show()
                             }
                         }
@@ -42,7 +42,6 @@ class AppLaunch : Application() {
             })
         }.show()
     }
-
 }
 
 fun main() {
