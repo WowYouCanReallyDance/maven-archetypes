@@ -22,16 +22,19 @@ class AppLaunch : Application() {
                 setPrefSize(820.0, 560.0)
                 background = Background.fill(Paint.valueOf("#FAEBD7"))
                 children.add(VBox().apply {
+                    this.spacing = 12.0
                     alignment = Pos.CENTER
-                    background = Background.fill(Paint.valueOf("#A69532"))
+//                    background = Background.fill(Paint.valueOf("#A69532"))
                     children.addAll(
                         TextField().apply {
-                            setPrefSize(320.0, 32.0)
+                            setPrefSize(320.0, 46.0)
+                            promptText = "Please entry the username:"
                         },
                         PasswordField().apply {
-                            setPrefSize(320.0, 32.0)
+                            setPrefSize(320.0, 46.0)
+                            promptText = "Please entry the password:"
                         },
-                        Button().apply {
+                        Button("Login").apply {
                             setPrefSize(320.0, 46.0)
                             onMouseClicked = EventHandler {
                                 Alert(Alert.AlertType.CONFIRMATION).show()
